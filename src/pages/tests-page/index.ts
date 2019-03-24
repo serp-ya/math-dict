@@ -1,0 +1,1 @@
+export { TestsPageController as TestsPage } from './tests-page-controller';

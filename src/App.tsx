@@ -1,28 +1,33 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { Container, Grid, GridColumn } from 'semantic-ui-react';
+import { store } from './store';
+import { HomePage, TestsPage } from './pages';
+import { ThemesMenu } from './modules/themes-menu';
 
-class App extends Component {
+export class App extends React.PureComponent {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Provider store={store}>
+        <Router basename={process.env.PUBLIC_URL}>
+          <Container fluid>
+            <Grid>
+              <Grid.Row>
+                <GridColumn width={3}>
+                  <ThemesMenu />
+                </GridColumn>
+                <Grid.Column width={13}>
+                  <Switch>
+                    <Route path="/" exact component={HomePage} />
+                    <Route path="/theme/:themeName" component={TestsPage} />
+                  </Switch>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Container>
+        </Router>
+      </Provider>
     );
   }
 }
-
-export default App;

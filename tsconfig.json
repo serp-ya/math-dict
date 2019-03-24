@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "lib": [
       "dom",
       "dom.iterable",
@@ -17,8 +17,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "exportDefaultFrom": true,
+    "baseUrl": "./",
+    "paths": {
+        "@/*": ["src/*"]
+    }
   },
+  "exclude": [
+    "node_modules",
+    "config",
+    "public",
+    "scripts"
+  ],
   "include": [
     "src"
   ]

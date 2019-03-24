@@ -1,0 +1,1 @@
+export { exponentiationTheme } from './exponentiation';

@@ -1,0 +1,1 @@
+export { ThemesMenuController as ThemesMenu } from './themes-menu-controller';

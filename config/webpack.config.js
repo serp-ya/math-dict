@@ -23,6 +23,7 @@ const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
@@ -265,6 +266,10 @@ module.exports = function(webpackEnv) {
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
         'react-native': 'react-native-web',
+        '@': (() => {
+          console.log('#'.repeat(25), path.resolve(__dirname, '..', 'src'));
+          return path.resolve(__dirname, '..', 'src');
+        })(),
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding
@@ -586,6 +591,12 @@ module.exports = function(webpackEnv) {
           // The formatter is invoked directly in WebpackDevServerUtils during development
           formatter: isEnvProduction ? typescriptFormatter : undefined,
         }),
+      isEnvDevelopment && new CircularDependencyPlugin({
+        exclude: /node_modules/,
+        onDetected({ module: webpackModuleRecord, paths, compilation }) {
+          compilation.warnings.push(new Error(paths.join(' -> ')));
+        },
+      })
     ].filter(Boolean),
     // Some libraries import Node modules but don't use them in the browser.
     // Tell Webpack to provide empty mocks for them so importing them works.
