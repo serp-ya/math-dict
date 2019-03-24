@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "d6850de5d725483533b7",
+    "revision": "db8d6b0172fb876cb590",
     "url": "/math-dict/static/css/main.878b2e58.chunk.css"
   },
   {
-    "revision": "d6850de5d725483533b7",
-    "url": "/math-dict/static/js/main.9c25554a.chunk.js"
+    "revision": "db8d6b0172fb876cb590",
+    "url": "/math-dict/static/js/main.d1615811.chunk.js"
   },
   {
     "revision": "7e92c8c26a4d9d6df0d0",
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/math-dict/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "5f36c69f71ca265372a1f4b30e157484",
+    "revision": "e78001c74fe8025c136a76c750ce5e35",
     "url": "/math-dict/index.html"
   }
 ];
