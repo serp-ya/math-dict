@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "db8d6b0172fb876cb590",
+    "revision": "a52c05efdff92ee2dab4",
     "url": "/math-dict/static/css/main.878b2e58.chunk.css"
   },
   {
-    "revision": "db8d6b0172fb876cb590",
-    "url": "/math-dict/static/js/main.d1615811.chunk.js"
+    "revision": "a52c05efdff92ee2dab4",
+    "url": "/math-dict/static/js/main.d80a3a94.chunk.js"
   },
   {
     "revision": "7e92c8c26a4d9d6df0d0",
     "url": "/math-dict/static/js/runtime~main.79c73912.js"
   },
   {
-    "revision": "66861499f8b9d46c7e82",
+    "revision": "296b861bbfd5021b068f",
     "url": "/math-dict/static/css/2.591df75b.chunk.css"
   },
   {
-    "revision": "66861499f8b9d46c7e82",
-    "url": "/math-dict/static/js/2.c0803e0f.chunk.js"
+    "revision": "296b861bbfd5021b068f",
+    "url": "/math-dict/static/js/2.608f90b5.chunk.js"
   },
   {
     "revision": "cd6c777f1945164224dee082abaea03a",
@@ -56,16 +56,16 @@ self.__precacheManifest = [
     "url": "/math-dict/static/media/brand-icons.a046592b.woff"
   },
   {
-    "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
-    "url": "/math-dict/static/media/icons.8e3c7f55.eot"
-  },
-  {
     "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
     "url": "/math-dict/static/media/icons.b87b9ba5.ttf"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
     "url": "/math-dict/static/media/brand-icons.13db00b7.eot"
+  },
+  {
+    "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
+    "url": "/math-dict/static/media/icons.8e3c7f55.eot"
   },
   {
     "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/math-dict/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "e78001c74fe8025c136a76c750ce5e35",
+    "revision": "b21e80448614dc7f80da563006e58749",
     "url": "/math-dict/index.html"
   }
 ];
