@@ -1,3 +1,6 @@
+## Demo
+https://serp-ya.github.io/math-dict/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
