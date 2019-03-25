@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { List } from 'semantic-ui-react';
-import equalSignsDelimeter from './assets/equal.png';
-import equalQuestionSignsDelimeter from './assets/equal-question.png';
+import equalSign from './assets/equal.png';
+import questionSign from './assets/question.png';
 
 export class TestFormula extends React.PureComponent<any> {
   state = { 
@@ -26,8 +26,8 @@ export class TestFormula extends React.PureComponent<any> {
         </div>
         <List.Item>
           <img src={this.props.leftPart} />
-          <img src={showAnswer ? equalSignsDelimeter : equalQuestionSignsDelimeter} />
-          {showAnswer ? <img src={this.props.rigthPart} /> : null}
+          <img src={equalSign} />
+          <img src={showAnswer ? this.props.rigthPart : questionSign} />
         </List.Item>
       </div>
     );
