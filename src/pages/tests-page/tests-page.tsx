@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Header } from 'semantic-ui-react';
 import { IThemeModel } from '@/store';
-import { TestFormulaList } from './modules';
+import { TestFormulaList } from '@/modules/test-formula-list';
 
 type TestsPagePropsType = {
   themeData: IThemeModel,
